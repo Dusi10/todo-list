@@ -2,10 +2,9 @@
 
 .input{
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative; /*mivel a gombot az input fieldbe fogjuk rakni ezért itt realtiv kell hogy legyen mivel ez a szülő ha nem lenne itt megadva akkor az egész oldalhoz igazítaná a gombot ahol ez megvan adva ahhoz fogja igazitani a gomb magát vagy hát ahol megadjuk az absolutot*/
     align-items: center;
-    font-family: "Neucha", cursive;
 }
 .input_box{
     width: 100%;
@@ -41,20 +40,40 @@
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
 }
+.container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .todos {
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 47%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: rgb(50, 195, 205);
 }
+.todos_heading{
+    font-size: 30px;
+    color: black;
+}
+
 .todos_single{
     display: flex;
-    width: 29.5%;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 20px;
     margin-top: 15px;
     background-image: url("/src/9a0b9294dffad557b54624f60974a9cf.jpg");
+    transition: 0.2s;
 }
+.todos_single:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.02);
+}
+
 .todos_single--text{
     flex: 1;
     padding: 5px;
@@ -69,9 +88,9 @@
     font-size: 25px;
     cursor: pointer;
 }
-@media (max-width: 1200px){
-    .todos_single{
-        width: 30%;
+@media (max-width: 1100px){
+    .todos{
+        width: 45%;
     }
 }
 @media (max-width: 700px){
@@ -80,8 +99,14 @@
     }
     .todos {
         width: 95%;
+        margin-bottom: 10px;
     }
-    .todos_single{
-        width: 100%;
+    .container{
+        width: 95%;
+        flex-direction: column;
     }
+}
+
+.remove{
+    background-color: coral;
 }
