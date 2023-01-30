@@ -110,3 +110,12 @@
 .remove{
     background-color: coral;
 }
+.dragged{
+    background-color: navy;
+}
+.doneDragging{
+    background-color: darkred;
+}
+.drag{
+    box-shadow: 0 0 5px black;
+}
